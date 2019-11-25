@@ -6,7 +6,6 @@
 package example1;
 
 /**
- *
  * @author tjotoole
  */
 public class MyWeight {
@@ -19,6 +18,8 @@ public class MyWeight {
         double pounds;
         
         pounds = kg*2.2;
+        
+        System.out.println(kg + "kg is: " + pounds + "pounds.");
     }
     
 }

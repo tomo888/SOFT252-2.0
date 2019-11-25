@@ -19,10 +19,11 @@ public class MyHeight {
         int cm;
         double inches;
         double feet;
+        double correctFeet;
         
         inches = cm/2.54;
         feet = inches/12;
-        correctFeet = feet%;
+        correctFeet = inches%12;
         
     }
     
