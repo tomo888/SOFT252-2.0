@@ -17,6 +17,19 @@ public class MyWeight extends javax.swing.JFrame {
     public MyWeight() {
         initComponents();
     }
+    
+    private void doConversion()
+    {
+        int kg = Integer.parseInt(txtKg.getText());
+        double pounds;
+        
+        pounds = kg * 2.2;
+        txtPounds.setText("" + pounds);
+    }
+    
+    private void exitApp() {
+        System.exit(0);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,6 +56,11 @@ public class MyWeight extends javax.swing.JFrame {
         txtPounds.setEditable(false);
 
         btnClose.setText("Close");
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCloseActionPerformed(evt);
+            }
+        });
 
         btnConvert.setText("Convert >");
         btnConvert.addActionListener(new java.awt.event.ActionListener() {
@@ -99,8 +117,12 @@ public class MyWeight extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
-        // TODO add your handling code here:
+        doConversion();
     }//GEN-LAST:event_btnConvertActionPerformed
+
+    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
+        exitApp();
+    }//GEN-LAST:event_btnCloseActionPerformed
 
     /**
      * @param args the command line arguments
